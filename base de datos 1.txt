@@ -1,0 +1,56 @@
+go
+create database Instituto;
+go
+
+go
+use Instituto;
+go
+
+go
+create table Estudiante
+(
+cod_estudiante int primary key identity(1,1),
+nombre varchar(50),
+apellido varchar(50),
+telefono Varchar(20),
+direccion varchar(Max),
+edad varchar(3)
+);
+go
+
+go
+create table Profesor
+(
+cod_profesor int primary key identity(1,1),
+nombre varchar(50),
+apellido varchar(50),
+telefono Varchar(20),
+direccion varchar(Max),
+edad varchar(3),
+Cedula varchar(50)
+);
+go
+
+go
+create table Curso
+(
+cod_curso int primary key identity(1,1),
+seccion varchar(5),
+cod_profesor int,
+cod_estudiante int,
+periodo varchar(50)
+);
+go
+
+insert into Estudiante values('pedro','caseres','809-677-5566','la duarte','17');
+insert into Estudiante values('luis','paredes','849-112-5766','la independencia','16');
+insert into Estudiante values('juan','castro','829-234-0566','la paris','18');
+insert into Estudiante values('carlos','vives','829-897-0066','los alcarrisos','17');
+insert into Estudiante values('pedro','caseres','809-777-5786','bonao','15');
+
+insert into Profesor values('carlos','ortiz','809-111-000','invivienda','35','001-7866934-1');
+insert into Profesor values('oscar','perez','809-111-000','invivienda','35','001-7866934-1');
+insert into Profesor values('irma','johnson','809-111-000','invivienda','35','001-7866934-1');
+
+insert into Curso values('009','1','1','enero-abril');
+insert into Curso values('010','3','5','septimbre-diciembre');

@@ -1,0 +1,41 @@
+go
+create database biblioteca;
+go
+
+go
+use biblioteca;
+go
+
+go
+create table libros
+(
+cod_libro int primary key identity(1,1),
+titulo varchar(50),
+Cantidad_paginas varchar(50),
+tipo varchar(50),
+cod_autor int,
+editora varchar(50),
+);
+go
+
+go
+create table autor
+(
+cod_autor int primary key identity(1,1),
+Nombre varchar(50),
+apellido varchar(50),
+direccion varchar(50),
+telefono  varchar(50)
+);
+go
+insert into libros values('cuentos de pepito','300','comedia','1','cuentitas.inc');
+insert into libros values('lengua espanola','456','literatura','3','Santillana');
+insert into libros values('Matematica','309','comedia','4','susaeta');
+insert into libros values('cordorito','150','comedia','5','cuentitas.inc');
+insert into libros values('ciencias sociales','400','comedia','2','Santillana');
+
+insert into autor values('pedro','sanchez','santiago','809-786-4455');
+insert into autor values('carlos','ortiz','santo domingo','839-990-7776')
+insert into autor values('uriel','taveras','santiago','809-786-4455');
+insert into autor values('jesus','binicio','monte cristi','809-786-4455')
+insert into autor values('pablo','perez','higuey','809-786-4455')
